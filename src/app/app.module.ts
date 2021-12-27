@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
+import { TareasService } from './tareas/services/tareas.service';
 import { TareasModule } from './tareas/tareas.module';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { TareasModule } from './tareas/tareas.module';
     BrowserModule,
     TareasModule
   ],
-  providers: [],
+  providers: [TareasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
