@@ -8,13 +8,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let tarea of tareas; index as i" >
+    <tr *ngFor="let tarea of tareas; index as i">
       <th>{{i + 1}}</th>
       <td>
-        <b>{{tarea}}</b>
+        <b [ngClass]="tarea.completada ? 'is-underlined' : ''">{{tarea.tarea}}</b>
       </td>
       <td>
-        <button class="button is-success is-rounded">
+        <button [disabled]="tarea.completada" class="button  is-success is-rounded" (click)="complete(tarea)">
           <span class="icon is-small">
             <i class="fas fa-check"></i>
           </span>
@@ -22,7 +22,7 @@
         </button>
       </td>
       <td>
-        <button class="button is-danger is-rounded">
+        <button class="button is-danger is-rounded" (click)="delete(tarea)">
           <span class="icon is-small">
             <i class="fas fa-times"></i>
           </span>

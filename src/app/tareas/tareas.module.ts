@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SubtituloComponent } from './subtitulo/subtitulo.component';
 import { ListadoTareasComponent } from './listado-tareas/listado-tareas.component';
 import { GridComponent } from './grid/grid.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -10,15 +12,18 @@ import { GridComponent } from './grid/grid.component';
   declarations: [
     SubtituloComponent,
     ListadoTareasComponent,
-    GridComponent
+    GridComponent,
+    FormularioComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     SubtituloComponent,
     ListadoTareasComponent,
-    GridComponent
+    GridComponent,
+    FormularioComponent
   ]
 })
 export class TareasModule { }
