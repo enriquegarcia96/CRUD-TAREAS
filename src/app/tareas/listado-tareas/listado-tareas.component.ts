@@ -7,22 +7,18 @@ import { TareasService } from '../services/tareas.service';
   templateUrl: './listado-tareas.component.html',
   styleUrls: ['./listado-tareas.component.css'],
 })
-export class ListadoTareasComponent  {
-
+export class ListadoTareasComponent {
   constructor(private tareasService: TareasService) {}
 
-  get tareas(){
+  get tareas() {
     return this.tareasService.obtenerTareas();
   }
 
-  delete(tarea: Tarea){
+  delete(tarea: Tarea) {
     this.tareasService.deleteTarea(tarea.tarea);
   }
 
-  complete(tarea: Tarea){
+  complete(tarea: Tarea) {
     this.tareasService.completeTarea(tarea.tarea);
   }
-
-
-
 }
