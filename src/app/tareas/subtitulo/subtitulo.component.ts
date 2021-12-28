@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TareasService } from '../services/tareas.service';
 
 @Component({
   selector: 'app-subtitulo',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./subtitulo.component.css']
 })
 export class SubtituloComponent {
+
+  constructor(private tareasService: TareasService){}
+
+  get tareas(){
+    return this.tareasService.tareas.length;
+  }
+
 
 }
